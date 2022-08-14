@@ -1,10 +1,10 @@
 <template>
-  <div class="about-container">
-    AboutView.vue 组件
+  <div>
+    IndexView.vue 组件
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {}
 </script>
 
