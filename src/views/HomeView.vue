@@ -174,12 +174,6 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-// 版心
-.wrapper {
-  margin: 0 auto;
-  width: 1200px;
-}
-
 // 公共头部
 header {
   position: fixed;
