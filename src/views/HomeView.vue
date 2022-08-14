@@ -107,10 +107,10 @@
                     <td>
                       <input type="text" id="checkCode" name="checkCode" placeholder="填写右侧的验证码">
                       <div class="checkCode">
-                        <font color="#707F02">4</font>
-                        <font color="#73C841">z</font>
-                        <font color="#BC3087">v</font>
-                        <font color="#6B486E">e</font>
+                        <span :style="{color: '#707F02'}">4</span>
+                        <span :style="{color: '#73C841'}">z</span>
+                        <span :style="{color: '#BC3087'}">v</span>
+                        <span :style="{color: '#6B486E'}">e</span>
                       </div>
                     </td>
                   </tr>
@@ -224,7 +224,7 @@ header {
 footer {
   .top {
     height: 500px;
-    background: url(../images/con8_bg.jpg) no-repeat center;
+    background: url(../assets/images/con8_bg.jpg) no-repeat center;
 
     .wrapper {
       padding: 50px 0;
