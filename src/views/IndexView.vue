@@ -219,14 +219,8 @@
             <a href="">了解更多学院环境 <span class="fa fa-caret-right"></span></a>
           </div>
         </div>
-        <div class="bottom">
-          <ul>
-            <li v-for="(item, index) in schoolList" :key="index">
-              <span><img :src="require(`../assets/uploads/${item.schoolImg}`)" alt=""></span>
-              <div>{{item.schoolDesc}}</div>
-            </li>
-          </ul>
-        </div>
+        <!-- 学校环境展示 -->
+        <MySchool/>
       </div>
     </div>
 
@@ -259,6 +253,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import MySchool from '@/components/MySchool.vue'
 
 export default defineComponent({
   data() {
@@ -315,40 +310,6 @@ export default defineComponent({
           teacherImg: 'teacher6.jpg'
         }
       ],
-      schoolList: [
-        {
-          schoolDesc: '智能时代学校',
-          schoolImg: 'school1.jpg'
-        },
-        {
-          schoolDesc: '教学楼',
-          schoolImg: 'school2.jpg'
-        },
-        {
-          schoolDesc: 'U型楼',
-          schoolImg: 'school3.jpg'
-        },
-        {
-          schoolDesc: '机器人实训',
-          schoolImg: 'school4.jpg'
-        },
-        {
-          schoolDesc: '课堂现场',
-          schoolImg: 'school5.jpg'
-        },
-        {
-          schoolDesc: '学校饭堂',
-          schoolImg: 'school6.jpg'
-        },
-        {
-          schoolDesc: '宿舍环境',
-          schoolImg: 'school7.jpg'
-        },
-        {
-          schoolDesc: '校园活动',
-          schoolImg: 'school8.jpg'
-        }
-      ],
       recentNewsList: [
         {
           title: '智能时代校园篮球杯',
@@ -374,6 +335,9 @@ export default defineComponent({
       this.teacherDesc = this.teacherList[index].teacherDesc
       this.teacherImg = this.teacherList[index].teacherImg
     }
+  },
+  components: {
+    MySchool
   }
 })
 </script>
@@ -794,77 +758,30 @@ export default defineComponent({
   }
 }
 
-// 抽取公共顶部
-.common_top() {
-  .top {
-    text-align: center;
-
-    h4 {
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    div {
-      a {
-        float: right;
-        transition: all 0.5s;
-
-        &:hover {
-          transform: translateY(-8px);
-        }
-      }
-    }
-  }
-}
-
 // 学校展示
 .school {
-  background: url(../assets/images/con6_bg.jpg) no-repeat center;
+  background: url('../assets/images/con6_bg.jpg') no-repeat center;
   height: 740px;
 
   .wrapper {
     padding: 30px 0;
     height: 100%;
 
-    .common_top();
+    .top {
+      text-align: center;
 
-    .bottom {
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 40px;
+      h4 {
+        font-size: 24px;
+        font-weight: 500;
+      }
 
-        li {
-          padding: 5px;
-
-          span {
-            display: block;
-            overflow: hidden;
-
-            img {
-              width: 100%;
-              height: 217.5px;
-              transition: all 0.5s;
-            }
-          }
-
-          div {
-            height: 44px;
-            background-color: #444444;
-            color: #fff;
-            font-size: 14px;
-            text-align: center;
-            line-height: 44px;
-          }
+      div {
+        a {
+          float: right;
+          transition: all 0.5s;
 
           &:hover {
-            img {
-              transform: scale(1.1);
-            }
-
-            div {
-              background-color: #1c6bb6;
-            }
+            transform: translateY(-8px);
           }
         }
       }
@@ -880,7 +797,25 @@ export default defineComponent({
     padding: 30px 0;
     height: 100%;
 
-    .common_top();
+    .top {
+      text-align: center;
+
+      h4 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      div {
+        a {
+          float: right;
+          transition: all 0.5s;
+
+          &:hover {
+            transform: translateY(-8px);
+          }
+        }
+      }
+    }
 
     .bottom {
       ul {
